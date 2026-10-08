@@ -1,0 +1,109 @@
+# Hotel Booking Data Exploration
+
+An exploratory data analysis project using the **Hotel Booking Demand** dataset. The project examines booking patterns, customer behavior, cancellation trends, and relationships between hotel reservation features through visual analytics and introductory machine learning.
+
+## Project objectives
+
+- Explore and clean hotel booking data.
+- Compare booking behavior across city and resort hotels.
+- Investigate cancellation patterns and customer segments.
+- Analyze seasonal and monthly booking trends.
+- Examine relationships between numerical and categorical features.
+- Apply dimensionality-reduction techniques such as PCA and t-SNE.
+- Train and evaluate a logistic regression model for cancellation prediction.
+
+## Dataset
+
+The dataset is stored at [`dataset/hotel_bookings.csv`](dataset/hotel_bookings.csv) and contains:
+
+- **119,390** booking records
+- **32** columns
+- Booking details such as hotel type, lead time, arrival date, length of stay, meal, market segment, customer type, daily rate, and reservation status
+- The `is_canceled` column as the cancellation indicator used for analysis and classification
+
+## Repository structure
+
+```text
+Hotel_Booking_Data_Exploration/
+├── dataset/
+│   └── hotel_bookings.csv
+├── notebooks/
+│   └── Hotel_Booking_Analysis.ipynb
+├── report/
+├── visualizations/
+├── requirements.txt
+└── README.md
+```
+
+- **`notebooks/`**: Jupyter Notebook containing the complete analysis.
+- **`dataset/`**: Source CSV dataset used by the notebook.
+- **`report/`**: Location for exported analysis reports.
+- **`visualizations/`**: Location for exported charts and visualizations.
+
+## Technologies and libraries
+
+- Python
+- Jupyter Notebook
+- pandas and NumPy for data preparation
+- Matplotlib and Seaborn for static visualizations
+- Plotly and Bokeh for interactive visualizations
+- scikit-learn for scaling, PCA, t-SNE, logistic regression, and evaluation metrics
+
+## Getting started
+
+### 1. Clone or download the project
+
+Open a terminal in the project directory:
+
+```powershell
+cd Hotel_Booking_Data_Exploration
+```
+
+### 2. Create and activate a virtual environment
+
+On Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
+
+```powershell
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 4. Start Jupyter
+
+```powershell
+jupyter notebook
+```
+
+Open [`notebooks/Hotel_Booking_Analysis.ipynb`](notebooks/Hotel_Booking_Analysis.ipynb) and run the cells from top to bottom.
+
+The notebook reads the dataset using the relative path `../dataset/hotel_bookings.csv`, so it should be run from its existing location or opened through Jupyter as part of this project.
+
+## Analysis workflow
+
+The notebook follows this general workflow:
+
+1. Load the CSV dataset with pandas.
+2. Inspect the dataset structure and summary statistics.
+3. Handle missing values and prepare features.
+4. Explore booking, arrival, hotel, customer, and cancellation patterns.
+5. Create static and interactive visualizations.
+6. Standardize numerical features.
+7. Use PCA and t-SNE for two-dimensional feature exploration.
+8. Train a logistic regression classifier.
+9. Evaluate the classifier with accuracy, precision, recall, F1 score, a confusion matrix, and a classification report.
+
+## Outputs
+
+Generated charts can be saved in [`visualizations/`](visualizations/), and written analysis or summaries can be saved in [`report/`](report/). The notebook also displays many results inline while it is running.
+
+## Notes
+
+- The analysis is intended for exploration and learning; model results should not be treated as a production cancellation-prediction service without additional validation.
+- Keep the dataset path unchanged unless the notebook's CSV path is updated as well.
